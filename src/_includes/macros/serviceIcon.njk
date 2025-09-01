@@ -1,0 +1,72 @@
+{# Two-tone line icons: white outline under gold stroke #}
+{% macro serviceIcon(name, size=28, className="") %}
+  {% set s = size %}
+  {% set gold = "var(--apx-gold, #D4AF37)" %} {# fallback gold; override via CSS variable if you wish #}
+  {% if name == "accounting" %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         width="{{ s }}" height="{{ s }}" fill="none"
+         class="{{ className }}" aria-hidden="true">
+      <g stroke-linecap="round" stroke-linejoin="round">
+        {# underlayer (white) #}
+        <g stroke="#FFFFFF" opacity=".98" stroke-width="3.6">
+          <rect x="4" y="2" width="16" height="20" rx="2"/>
+          <line x1="8" y1="7" x2="16" y2="7"/>
+          <line x1="8" y1="11" x2="16" y2="11"/>
+          <line x1="8" y1="15" x2="16" y2="15"/>
+          <line x1="8" y1="19" x2="16" y2="19"/>
+          <line x1="12" y1="11" x2="12" y2="19"/>
+        </g>
+        {# topline (gold) #}
+        <g stroke="{{ gold }}" stroke-width="2">
+          <rect x="4" y="2" width="16" height="20" rx="2"/>
+          <line x1="8" y1="7" x2="16" y2="7"/>
+          <line x1="8" y1="11" x2="16" y2="11"/>
+          <line x1="8" y1="15" x2="16" y2="15"/>
+          <line x1="8" y1="19" x2="16" y2="19"/>
+          <line x1="12" y1="11" x2="12" y2="19"/>
+        </g>
+      </g>
+    </svg>
+
+  {% elif name == "advisory" %}
+    {# Axes + trending arrow #}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         width="{{ s }}" height="{{ s }}" fill="none"
+         class="{{ className }}" aria-hidden="true">
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#FFFFFF" opacity=".98" stroke-width="3.6">
+          <path d="M3 21V4"/>
+          <path d="M3 21H20"/>
+          <path d="M6.5 15.5l5-5 4 3 3.5-6"/>
+        </g>
+        <g stroke="{{ gold }}" stroke-width="2">
+          <path d="M3 21V4"/>
+          <path d="M3 21H20"/>
+          <path d="M6.5 15.5l5-5 4 3 3.5-6"/>
+        </g>
+      </g>
+    </svg>
+
+  {% elif name == "hr" %}
+    {# Users / person + shoulders arc #}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         width="{{ s }}" height="{{ s }}" fill="none"
+         class="{{ className }}" aria-hidden="true">
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#FFFFFF" opacity=".98" stroke-width="3.6">
+          <circle cx="12" cy="8" r="3"/>
+          <path d="M6 20c0-3.3 3-6 6-6s6 2.7 6 6"/>
+          <circle cx="5" cy="10" r="2"/>
+          <circle cx="19" cy="10" r="2"/>
+        </g>
+        <g stroke="{{ gold }}" stroke-width="2">
+          <circle cx="12" cy="8" r="3"/>
+          <path d="M6 20c0-3.3 3-6 6-6s6 2.7 6 6"/>
+          <circle cx="5" cy="10" r="2"/>
+          <circle cx="19" cy="10" r="2"/>
+        </g>
+      </g>
+    </svg>
+
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,22 @@
+{# macros/logoGrid.njk #}
+{% macro logoGrid(logos) %}
+  {% if logos and logos.length %}
+    <ul class="mt-5 grid grid-cols-2 gap-4 items-center">
+      {% for logo in logos %}
+        <li class="flex items-center justify-center">
+          {% if logo.url %}
+            <a href="{{ logo.url }}" target="_blank" rel="noopener">
+          {% endif %}
+              <img
+                src="{{ logo.src }}"
+                alt="{{ logo.alt or 'Client logo' }}"
+                class="max-h-10 md:max-h-12 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition"
+                loading="lazy" decoding="async" />
+          {% if logo.url %}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

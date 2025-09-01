@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ locale.code }}" dir="{{ locale.dir }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ dict[title].title }}</title>
+  <!-- Favicon -->
+  <link href="/images/logo-icon-xs.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="/css/tailwind.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  {# SEO: alternate language URLs #}
+  {% for l in locales %}
+    <link rel="alternate"
+          hreflang="{{ l.code }}"
+          href="{{ page.url | swapLang(locale, l) }}" />
+  {% endfor %}
+  <link rel="canonical"
+    href="{{ page.url }}" />
+</head>
+<body class="font-en text-slate-800 tracking-widest">
+
+    {% include "header.njk" %}
+
+    <main>
+    {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script src="/js/wow.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

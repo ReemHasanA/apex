@@ -1,0 +1,194 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+
+  "brand": "APEX Consultancy",
+  "slogan": "A Partnership To The Top",
+
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "clients": "Clients & Industries",
+    "contact": "Contact"
+  },
+
+  "cta.book": "Book a Free Consultation",
+  "cta" :{
+    "office": "Visit our office",
+    "more": "More",
+    "about": "Know more About Us",
+    "team": "Meet our Team",
+    "book": "Book a Free Consultation"
+  },
+  "common": {
+    "cta.freeConsult": "Book a Free Consultation",
+    "cta.services": "Services",
+    "cta.whatsapp": "Chat on WhatsApp",
+    "cta.contact": "Contact page",
+    "btn.requestQuote": "Request a quote",
+    "hours": "Hours",
+    "hours.week": "Sun–Thu: 9:00–18:00",
+    "hours.weekend": "Fri–Sat: Closed",
+    "address.label": "Address",
+    "address.text": "Olaya St, Al Akaria 3, Riyadh, Saudi Arabia",
+    "phone.label": "Phone",
+    "phone.text": "+966 59 577 2053",
+    "email.label": "Email",
+    "email.text": "info@apexconsultancy-sa.com"
+  },
+
+  "about": {
+    "title": "About APEX Consultancy",
+    "heroDesc": "APEX is a licensed consultancy firm serving SMEs across Saudi Arabia with accounting, financial and administrative expertise.",
+    "who": {
+      "title": "Who we are",
+      "body": "We’re specialists in accounting, finance and management, helping partners operate efficiently and make confident decisions across retail, entertainment & sports, construction, restaurants and e-commerce."
+    },
+    "vision" :{
+      "title": "Our Vision",
+      "body": "To be a leading safe haven for SMEs in Saudi Arabia—supporting short, medium and long-term goals while enhancing sustainability and growth."
+    },
+    "objectives" :{
+      "title": "Objectives",
+      "body": "Instill the value of financial management by delivering sustainable solutions and advice that drive operational efficiency and long-term value."
+    },
+    "values": {
+      "title": "Core Values",
+      "items": [
+        { "title": "Quality", "body": "Professional standards, timely delivery, decision-ready outputs." },
+        { "title": "Confidentiality & Commitment", "body": "Information confidentiality and professional ethics across all departments." },
+        { "title": "Impact & Improvement", "body": "Solutions that empower clients and evolve with industry change." }
+      ]
+    },
+    "team" :{
+      "title": "Management Team",
+      "members": [
+        {
+          "name": "Abdulaziz Dulaimi, CMA",
+          "role": "CEO",
+          "bio": "10+ years in financial management, budgeting, analysis & restructuring; contributed to obtaining two SAMA licenses (crowdfunding & payments). MBA, Cleveland State.",
+          "email": "Abdulaziz@apexconsultancy-sa.com"
+        },
+        {
+          "name": "Ahmad Mohammad, CMA, VAT Specialist, IFRS",
+          "role": "Financial & Accounting Consultant",
+          "bio": "11+ years in the KSA market; leadership roles in budgeting, cash flow, receivables, VAT and financial policies. MSc (UOW), BSc (Petra).",
+          "email": "ahmad@apexconsultancy-sa.com"
+        },
+        {
+          "name": "Shadi Al-Quedmani, IFRS",
+          "role": "Accounting Manager",
+          "bio": "8+ years across finance & accounting: financial statements, analysis & budgeting. BCom & Econ (Damascus).",
+          "email": "shadi@apexconsultancy-sa.com"
+        }
+      ]
+    }
+  },
+  "services": "Services",
+  "service": {
+    "desc": "We provide comprehensive financial and advisory solutions tailored to meet the needs of small and medium-sized enterprises in Saudi Arabia.",
+    "q": "What we do?",
+    "heroDesc": "Practical, compliant, and scalable services for SMEs in Saudi Arabia.",
+    "accounting": {
+      "title": "Accounting & Tax Advisory",
+      "bullets": [
+        "Design & setup of accounting systems",
+        "Bookkeeping (monthly/quarterly)",
+        "Financial statements preparation",
+        "VAT registration & filing",
+        "Withholding tax services"
+      ],
+      "desc": "We implement a clean chart of accounts, automate reconciliations, and file VAT/WHT on time—built around ZATCA requirements."
+    },
+    "advisory": {
+      "title": "Management Consulting",
+      "bullets": [
+        "Feasibility studies",
+        "Internal auditing",
+        "Business valuation"
+      ],
+      "desc": "From investment decisions to internal controls and valuation, our advisory helps you move confidently."
+    },
+    "hr": {
+      "title": "Preparing Policies & Procedures",
+      "bullets": [
+        "HR management (payroll & contracts)",
+        "Policies & procedures",
+        "Corporate governance services"
+      ],
+      "desc": "Clear policies and compliant payroll/contracts reduce risk and speed up hiring especially for growing SMEs."
+    }
+  },
+
+  "clients": {
+    "title": "Clients & Industries",
+    "heroDesc": "We work across multiple sectors—bringing proven practices from one industry to another.",
+    "industries": [
+      {
+        "title": "Retail & Wholesale",
+        "body": "Inventory controls, POS reconciliation, cash-flow visibility.",
+        "logos": [
+          { "src": "/images/clients/retail/code.png", "alt": "App Codes EST." },
+          { "src": "/images/clients/retail/last.png", "alt": "last Chapter" },
+          { "src": "/images/clients/retail/blue.png", "alt": "blue fields" },
+          { "src": "/images/clients/retail/qminc.png", "alt": "QminC" }
+        ]
+      },
+      {
+        "title": "Entertainment & Sports",
+        "body": "Project accounting, vendor management, event P&L.",
+        "logos": [
+          { "src": "/images/clients/ent/distrct.png", "alt": "Sportsdistrict", "url": "https://example.com" },
+          { "src": "/images/clients/ent/padel.png", "alt": "Padel Pass" }
+        ]
+      },
+      { 
+        "title": "Construction & Contracting", 
+        "body": "Job-costing, milestone billing, cost-to-complete tracking.",
+        "logos": [
+          { "src": "/images/clients/const/itmam.png", "alt": "Itmam Counsltncy" },
+          { "src": "/images/clients/const/tareem.png", "alt": "Tareem Enterprises", "url": "https://example.com" },
+          { "src": "/images/clients/const/aegis.png", "alt": "AEGIS", "url": "https://example.com" },
+          { "src": "/images/clients/const/un.png", "alt": "" }
+        ]
+      },
+      { 
+        "title": "Media, Tourism & Travel", 
+        "body": "Project-based costing, foreign currency, partner settlements.",
+        "logos": [
+          { "src": "/images/clients/media/grain.png", "alt": "Grain", "url": "https://example.com" },
+          { "src": "/images/clients/media/dolab.png", "alt": "dolab" },
+          { "src": "/images/clients/media/naman.png", "alt": "Naman Studio" }
+        ]
+      }
+    ],
+    "ctaTitle": "Let’s talk about your industry"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "heroDesc": "We respond within one business day.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "company": "Company",
+      "message": "How can we help?",
+      "send": "Send"
+    }
+  },
+  "css": {
+    "start": "Left",
+    "end": "Right"
+  },
+  "changelang": "عربي",
+  "work": {
+    "title": "Ready to improve your financial management?",
+    "desc": "A Partnership To The Top"
+  },
+  "hero": {
+    "title": "Trusted Accounting & Advisory for SMEs in Saudi Arabia",
+    "subtitle": "SOCPA-licensed experts helping you achieve operational efficiency, compliance, and growth."
+  },
+  "located": "Olaya St, Al Akaria 3, Riyadh, Saudi Arabia",
+  "created": "Created by"
+}

@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "sans-ar";
+	src: url("../fonts/HONORSansArabicUI-B.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "kaleko";
+	src: url("../fonts/Kaleko\ 105\ Round\ W01\ Bold.otf");
+}
+
+[dir="ltr"]{
+    font-family: "kaleko";
+}
+
+[dir="rtl"]{
+    font-family: "sans-ar";
+}
+
+.animated-text {
+  font-size: 36px;
+  display: inline-block;
+}
+
+.word {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 1s forwards;
+}
+

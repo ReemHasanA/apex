@@ -1,0 +1,227 @@
+---
+title: services
+pagination:
+  data: locales 
+  size: 1
+  alias: locale
+permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
+---
+
+{# <main>
+  <!-- HERO -->
+  <section class="py-20 bg-light/30 border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-gold font-semibold">— {{ dict.slogan }}</p>
+      <h1 class="text-4xl sm:text-5xl text-navy mt-2">{{ dict.services }}</h1>
+      <p class="mt-4 text-slate-700 max-w-2xl">
+        {{ dict.service.heroDesc }}
+      </p>
+    </div>
+  </section>
+
+  <!-- Accounting & Tax -->
+  <section id="accounting" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl text-navy">Accounting & Tax</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <ul class="space-y-3 text-slate-700">
+          <li>Design & setup of accounting systems</li>
+          <li>Bookkeeping (monthly/quarterly)</li>
+          <li>Financial statements preparation</li>
+          <li>VAT registration & filing</li>
+          <li>Withholding tax services</li>
+        </ul>
+        <div class="rounded-xl border border-slate-200 p-5 bg-white/70">
+          <p class="text-sm text-slate-600">
+            We implement a clean chart of accounts, automate reconciliations, and file VAT/WHT on time—built around ZATCA requirements. :contentReference[oaicite:14]{index=14}
+          </p>
+          <a href="https://wa.link/yarwxp/" class="mt-4 inline-block bg-gold text-navy px-4 py-2 rounded">Request a quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisory & Auditing -->
+  <section id="advisory" class="py-16 bg-light/20 border-y border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl text-navy">Advisory & Auditing</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <ul class="space-y-3 text-slate-700">
+          <li>Feasibility studies</li>
+          <li>Internal auditing</li>
+          <li>Business valuation</li>
+        </ul>
+        <p class="text-slate-700">
+          From investment decisions to internal controls and valuation, our advisory helps you move confidently and meet governance expectations. :contentReference[oaicite:15]{index=15}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HR & Policies -->
+  <section id="hr" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl text-navy">HR & Policies</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <ul class="space-y-3 text-slate-700">
+          <li>HR management (payroll & contracts)</li>
+          <li>Policies & procedures</li>
+          <li>Corporate governance services</li>
+        </ul>
+        <p class="text-slate-700">
+          Clear policies and compliant payroll/contracts reduce risk and speed up hiring—especially for growing SMEs. :contentReference[oaicite:16]{index=16}
+        </p>
+      </div>
+    </div>
+  </section>
+</main> #}
+
+{% from "macros/serviceIcon.njk" import serviceIcon %}
+
+{# --- HERO --- #}
+<section class="relative border-b border-slate-100 mb-14">
+  <div class="absolute inset-0 bg-[url('/images/view.png')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30"></div>
+
+  <div class="relative max-w-7xl mx-auto py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 m-6">
+      <p class="text-gold font-semibold">— {{ dict.slogan }}</p>
+      <h1 class="text-4xl sm:text-5xl text-navy mt-2">{{ dict.services }}</h1>
+      <p class="mt-4 text-slate-700 max-w-2xl">{{ dict.service.heroDesc }}</p>
+    </div>
+
+    {# CTA card: static on mobile, absolute on md+ #}
+    <div class="m-6 md:mt-0 md:absolute md:end-6 md:top-6 md:max-w-md">
+      <div class="rounded-xl border border-slate-200 p-6 sm:p-7 bg-white/80 backdrop-blur">
+        <p class="text-sm text-slate-600">{{ dict.service.accounting.desc }}</p>
+        <a href="https://wa.link/yarwxp/"
+           class="mt-4 inline-block bg-gold text-navy text-base px-5 py-2.5 rounded hover:opacity-90">
+          {{ dict.common['btn.requestQuote'] }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{# --- CARDS GRID --- #}
+<section class="max-w-6xl mx-auto px-4 py-10">
+  <div class="grid md:grid-cols-3 gap-6">
+
+    {# Small check icon (duotone) #}
+    {% macro checkIcon() %}
+      <svg class="mt-0.5 w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 6L9 17l-5-5" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".98"/>
+        <path d="M20 6L9 17l-5-5" stroke="var(--apx-gold, #D4AF37)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    {% endmacro %}
+
+    {# --- Card component --- #}
+    {% macro serviceCard(id, iconName, title, bullets, desc, cta=false) %}
+      <article id="{{ id }}" class="group rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-sm overflow-hidden shadow-sm hover:shadow-md transition">
+        <header class="flex items-center gap-3 px-4 py-3 bg-navy/95 text-slate-100">
+          <span class="inline-flex size-12 items-center justify-center rounded-xl ring-1 ring-white/10">
+            {{ serviceIcon(iconName, 26) }}
+          </span>
+          <h2 class="text-lg sm:text-xl font-semibold">{{ title }}</h2>
+        </header>
+
+        <div class="p-6">
+          {% if bullets and bullets.length %}
+            <ul class="space-y-2 text-slate-700">
+              {% for item in bullets %}
+                <li class="flex gap-3">
+                  {{ checkIcon() }}
+                  <span>{{ item }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if desc %}
+            <p class="mt-4 text-sm text-slate-600">{{ desc }}</p>
+          {% endif %}
+
+          {% if cta %}
+            <a href="https://wa.link/yarwxp/"
+               class="mt-5 inline-block bg-gold text-navy px-4 py-2 rounded hover:opacity-90">
+              {{ dict.common['btn.requestQuote'] }}
+            </a>
+          {% endif %}
+        </div>
+      </article>
+    {% endmacro %}
+
+    {{ serviceCard("accounting", "accounting", dict.service.accounting.title, dict.service.accounting.bullets, "", true) }}
+    {{ serviceCard("advisory", "advisory", dict.service.advisory.title, dict.service.advisory.bullets, dict.service.advisory.desc, false) }}
+    {{ serviceCard("hr", "hr", dict.service.hr.title, dict.service.hr.bullets, dict.service.hr.desc, false) }}
+
+  </div>
+</section>
+
+{# --- WIDE CTA BAND (replaces the two long paragraphs) --- #}
+<section class="mt-4 border-t border-slate-100 bg-light/30">
+  <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <p class="text-xl sm:text-2xl text-slate-800 max-w-3xl">
+      {{ dict.service.advisory.desc }}
+    </p>
+    <a href="https://wa.link/yarwxp/"
+       class="inline-block bg-navy text-white px-5 py-3 rounded hover:opacity-90">
+      {{ dict.common['cta.freeConsult'] }}
+    </a>
+  </div>
+</section>
+<section class="max-w-6xl mx-auto py-24 grid md:grid-cols-3 text-center bg-light/20">
+    <div id="accounting" class="ps-6">
+        <div class="flex items-center rounded-s-xl bg-navy/95 ring-1 ring-navy/10">
+        <span class="inline-flex size-12 items-center justify-center">
+            {{ serviceIcon("accounting", 26) }}
+        </span>
+        <h2 class="text-xl text-slate-200">{{ dict.service.accounting.title }}</h2>
+        </div>
+
+        <div class="p-6 gap-6">
+        <ul class="space-y-2 text-slate-700">
+            {% for item in dict.service.accounting.bullets %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    <div id="advisory" class="px-0">
+        <div class="flex items-center bg-navy/95 ring-1 ring-white/10">
+        <span class="inline-flex size-12 items-center justify-center">
+            {{ serviceIcon("advisory", 26) }}
+        </span>
+        <h2 class="text-xl text-slate-200 px-6">{{ dict.service.advisory.title }}</h2>
+        </div>
+
+        <div class="p-6 gap-6">
+        <ul class="space-y-3 text-slate-700">
+            {% for item in dict.service.advisory.bullets %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    <div id="hr" class="pe-6">
+        <div class="flex items-center rounded-e-xl bg-navy/95 ring-1 ring-white/10">
+        <span class="inline-flex size-12 items-center justify-center">
+            {{ serviceIcon("hr", 26) }}
+        </span>
+        <h2 class="text-xl text-slate-200">{{ dict.service.hr.title }}</h2>
+        </div>
+
+        <div class="p-6 gap-6">
+        <ul class="space-y-3 text-slate-700">
+            {% for item in dict.service.hr.bullets %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto py-8 border-t-2 border-slate-100 text-slate-700">
+    <p class="ltr:max-w-2xl rtl:max-w-xl ms-auto px-4 text-3xl sm:text-5xl text-balance indent-20">{{ dict.service.advisory.desc }}</p>
+    <p class="pt-36 p-4 text-2xl">{{ dict.service.hr.desc }}</p>
+</section>
+

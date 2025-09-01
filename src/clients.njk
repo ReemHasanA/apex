@@ -1,0 +1,36 @@
+---
+title: clients
+pagination:
+    data: locales
+    size: 1
+    alias: locale
+permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}clients.html"
+---
+{% from "macros/logoGrid.njk" import logoGrid %}
+<section class="py-20 bg-light/30 border-b border-slate-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="text-4xl sm:text-5xl font-bold text-navy">{{ dict.clients.title }}</h1>
+    <p class="mt-4 text-slate-700 max-w-2xl">{{ dict.clients.heroDesc }}</p>
+  </div>
+</section>
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% for ind in dict.clients.industries %}
+      <article class="p-6 rounded-xl border border-light bg-white">
+        <h3 class="text-lg text-gold">{{ ind.title }}</h3>
+        <p class="mt-2 text-slate-700">{{ ind.body }}</p>
+
+        {# logo grid (if any) #}
+        {{ logoGrid(ind.logos) }}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="py-16 bg-navy text-white text-center">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold">{{ dict.clients.ctaTitle }}</h2>
+    <a href="https://wa.link/yarwxp/" class="mt-6 inline-block bg-gold text-navy px-5 py-3 rounded">{{ dict.common['cta.freeConsult'] }}</a>
+  </div>
+</section>
