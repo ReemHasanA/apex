@@ -6,6 +6,13 @@
   <title>من نحن — القمة للاستشارات</title>
   <!-- Favicon -->
   <link href="/images/logo-icon-xs.png" rel="icon" type="image/png">
+
+  <!-- Preload Images (helps priority) -->
+  <link rel="preload" as="image" href="/images/view2.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/view.png" fetchpriority="high">
+
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/tailwind.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/main.css">
@@ -79,7 +86,7 @@
 <section class="relative border-b border-slate-100 mb-14 overflow-hidden">
   <!-- Background image with gentle Ken Burns -->
   <div class="absolute inset-0 bg-[url('/images/view2.png')] bg-cover bg-center
-              wow kenburns" data-wow-duration="1s"></div>
+              wow kenburns" data-src="/images/view2.png" data-wow-duration="1s"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30"></div>
 
   <div class="relative max-w-7xl mx-auto py-20 md:py-28">

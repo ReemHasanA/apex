@@ -253,7 +253,7 @@
   100% { transform: scale(1.06) translateZ(0); }
 }
 .kenburns {
-  animation: kenburns 8s ease-out forwards;
+  animation: kenburns 20s ease-out forwards;
 }
 
 /* Soft rise + fade for cards/blocks (used across sections) */
