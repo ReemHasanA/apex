@@ -9,24 +9,6 @@ title: index
 
 
 <!-- HERO -->
-
-{# <section class="bg-navy text-white">
-  <div class="max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <h1 class="text-3xl md:text-5xl font-bold leading-tight animated fadeInUp">{{ dict.hero.title }}</h1>
-      <p class="mt-4 text-white/80">{{ dict.hero.subtitle }}</p>
-      <div class="mt-6 flex gap-3 flex-row-reverse">
-        <a href="contact/#form"
-           class="bg-gold text-white px-5 py-3 rounded hover:opacity-90">{{ dict["cta.book"] }}</a>
-        <a href="{% if locale.slug %}/{{ locale.slug }}{% endif %}/services/"
-           class="px-5 py-3 rounded border border-white/30 hover:bg-white/10">{{ dict.services }}</a>
-      </div>
-    </div>
-    <div class="bg-[url('/images/view.png')] bg-cover bg-center rounded-lg min-h-[300px] md:min-h-[380px]"></div>
-    </div>
-</section> #}
-  {# <div class="animated-text wow">{{ dict.hero.subtitle }}
-  </div> #}
   
 <section class="overflow-hidden py-24">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -49,32 +31,6 @@ title: index
 </section>
 
 
-  <!-- CLIENTS & INDUSTRIES -->
-  {# <section class="py-16 bg-light">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-semibold text-navy">Clients & Industries</h2>
-      <p class="text-slate-600 mt-2">Retail, Entertainment & Sports, Consulting & Contracting, Restaurants & E-commerce.</p>
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-6 gap-6 opacity-90">
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-        <div class="h-12 bg-white rounded shadow-sm"></div>
-      </div>
-    </div>
-  </section> #}
-
-  {# <section class="py-16">
-    <div class="max-w-6xl mx-auto px-4 bg-navy text-white rounded-lg p-10 flex flex-col md:flex-row items-center justify-between">
-      <div>
-        <h3 class="text-2xl font-semibold">Ready to improve your financial management?</h3>
-        <p class="text-white/80 mt-1">Let’s design sustainable solutions for your business.</p>
-      </div>
-      <a href="contact#form" class="mt-6 md:mt-0 bg-gold px-5 py-3 rounded hover:opacity-90">Contact Us</a>
-    </div>
-  </section> #}
-
 <!-- CTA -->
 <section class="relative isolate overflow-hidden bg-navy py-24 sm:py-32">
   <img src="/images/sky.png" alt="skyscraper from bottom angel" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center opacity-10" />
@@ -95,24 +51,6 @@ title: index
         <a href="about" class="text-balance fadeIn{{ dict.css.start }} wow" data-wow-delay="1s"> {{ dict.cta.about }} <span aria-hidden="true" class="inline-block rtl:rotate-180">&rarr;</span></a>
         <a href="about#team" class="text-balance fadeIn{{ dict.css.start }} wow" data-wow-delay="1.5s"> {{ dict.cta.team }} <span aria-hidden="true" class="inline-block rtl:rotate-180">&rarr;</span></a>
       </div>
-      {# <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Offices worldwide</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Hours per week</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Paid time off</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
-        </div>
-      </dl> #}
     </div>
   </div>
 </section>
@@ -121,7 +59,6 @@ title: index
 <section class="py-[15vmin] px-[7%]">
   <div class="px-4">
     <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-2xl lg:text-4xl">
-      {# <div class="w-full grid grid-cols-3 gap-4 flex-wrap flex"> #}
       
       <!-- start -->
       <a href="services#accounting" class="block h-full mx-[2%] p-4 border rounded-3xl fadeInUp wow" data-wow-delay="0.3s">
@@ -159,12 +96,11 @@ title: index
       <h3 class="text-2xl font-bold text-navy">{{ dict.cta.office }}</h3>
       <p class="mt-2 text-slate-600">{{ dict.located }}</p>
       <ul class="mt-4 text-sm text-slate-600">
-        <li><span class="font-semibold">Sun–Thu:</span> 9:00–18:00</li>
-        <li><span class="font-semibold">Fri–Sat:</span> Closed</li>
+        <li>{{ dict.common["hours.week"] }}</li>
+        <li>{{ dict.common["hours.weekend"] }}</li>
       </ul>
       <div class="mt-6 flex gap-3">
         <a href="https://wa.link/yarwxp/" class="bg-gold text-navy px-4 py-2 rounded hover:opacity-90">{{ dict.cta.book }}</a>
-        {# <a href="contact" class="px-4 py-2 rounded border border-navy/30 hover:bg-navy/10">Contact page</a> #}
       </div>
     </div>
     <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm wow fadeInUp" data-wow-delay="0.1s">
