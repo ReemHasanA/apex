@@ -27,3 +27,52 @@
   animation: fadeIn 1s forwards;
 }
 
+/* start hidden like WOW expects */
+.wow { visibility: hidden; }
+
+/* Disable all motion if the user prefers reduced motion */
+.reduce-motion .animated { animation: none !important; }
+
+/* Card lift micro-interaction (hover/focus) */
+.card-lift {
+  transition: transform .25s ease, box-shadow .25s ease;
+  will-change: transform;
+}
+.card-lift:hover,
+.card-lift:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(0,0,0,.06);
+}
+
+/* Accent underline for section headings */
+.hd-underline {
+  position: relative;
+  display: inline-block;
+}
+.hd-underline::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -8px;
+  width: 56%;
+  height: 3px;
+  background: linear-gradient(90deg,var(--tw-gradient-from,#F2C94C),transparent);
+  border-radius: 999px;
+}
+
+/* logo polish */
+.client-logos img { 
+  filter: grayscale(100%); 
+  opacity:.85; 
+  transition: filter .25s ease, opacity .25s ease, transform .25s ease; 
+}
+.client-logos img:hover { 
+  filter: none; 
+  opacity:1; 
+  transform: translateY(-2px); 
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wow,
+  .animated { animation: none !important; transition: none !important; }
+}

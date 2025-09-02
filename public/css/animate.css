@@ -23,6 +23,40 @@
   animation-name: fadeIn;
 }
 
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
@@ -184,6 +218,70 @@
   animation-name: slideInRight;
 }
 
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+/* Gentle hero Ken Burns (background div) */
+@keyframes kenburns {
+  0%   { transform: scale(1) translateZ(0); }
+  100% { transform: scale(1.06) translateZ(0); }
+}
+.kenburns {
+  animation: kenburns 8s ease-out forwards;
+}
+
+/* Soft rise + fade for cards/blocks (used across sections) */
+@keyframes riseFade {
+  0%   { transform: translateY(12px); opacity: 0; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+.rise-fade {
+  animation: riseFade 700ms cubic-bezier(.2,.7,0,1) forwards;
+}
+
+/* custom unblur + scale animation (used on the masked image) */
+@keyframes unblurScale {
+  0%   { filter: blur(10px); transform: scale(.98); opacity: 0; }
+  100% { filter: blur(0);    transform: scale(1);    opacity: 1; }
+}
+.unblur-scale {
+  animation: unblurScale 900ms cubic-bezier(.2,.7,0,1) forwards;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wow,
+  .animated {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

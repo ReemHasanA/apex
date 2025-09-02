@@ -1,5 +1,5 @@
 {# macros/logoGrid.njk #}
-{% macro logoGrid(logos) %}
+{# {% macro logoGrid(logos) %}
   {% if logos and logos.length %}
     <ul class="mt-5 grid grid-cols-2 gap-4 items-center">
       {% for logo in logos %}
@@ -15,6 +15,19 @@
           {% if logo.url %}
             </a>
           {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %} #}
+{# macros/logoGrid.njk #}
+{% macro logoGrid(logos) %}
+  {% if logos and logos.length %}
+    <ul class="grid grid-cols-3 sm:grid-cols-4 gap-4 items-center">
+      {% for l in logos %}
+        <li class="flex items-center justify-center">
+          <img src="{{ l.src }}" alt="{{ l.alt or l.name or 'Client logo' }}"
+               class="max-h-10 sm:max-h-12 w-auto object-contain" loading="lazy">
         </li>
       {% endfor %}
     </ul>

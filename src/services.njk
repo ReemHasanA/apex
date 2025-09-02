@@ -8,6 +8,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 ---
 
 {% from "macros/serviceIcon.njk" import serviceIcon %}
+{% from "macros/checkIcon.njk" import checkIcon %}
 
 {# --- HERO --- #}
 <section class="relative border-b border-slate-100 mb-14">
@@ -15,14 +16,16 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
   <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30"></div>
 
   <div class="relative max-w-7xl mx-auto py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-4 m-6">
+    <div class="max-w-6xl mx-auto px-4 m-6 wow fadeInUp"
+     data-wow-duration=".7s">
       <p class="text-gold font-semibold">— {{ dict.slogan }}</p>
       <h1 class="text-4xl sm:text-5xl text-navy mt-2">{{ dict.services }}</h1>
       <p class="mt-4 text-slate-700 max-w-2xl">{{ dict.service.heroDesc }}</p>
     </div>
 
     {# CTA card: static on mobile, absolute on md+ #}
-    <div class="m-6 md:mt-0 md:absolute md:end-6 md:top-6 md:max-w-md">
+    <div class="m-6 md:mt-0 md:absolute md:end-6 md:top-6 md:max-w-md wow fadeInDown"
+     data-wow-duration=".7s">
       <div class="rounded-xl border border-slate-200 p-6 sm:p-7 bg-white/80 backdrop-blur">
         <p class="text-sm text-slate-600">{{ dict.service.accounting.desc }}</p>
         <a href="https://wa.link/yarwxp/"
@@ -37,17 +40,9 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 <section class="max-w-6xl mx-auto px-4 py-10">
   <div class="grid md:grid-cols-3 gap-6">
 
-    {# Small check icon (duotone) #}
-    {% macro checkIcon() %}
-      <svg class="mt-0.5 w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M20 6L9 17l-5-5" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".98"/>
-        <path d="M20 6L9 17l-5-5" stroke="var(--apx-gold, #D4AF37)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    {% endmacro %}
-
     {# --- Card component --- #}
-    {% macro serviceCard(id, iconName, title, bullets, desc, cta=false) %}
-      <article id="{{ id }}" class="group rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-sm overflow-hidden shadow-sm hover:shadow-md transition">
+    {% macro serviceCard(id, iconName, title, bullets) %}
+      <article id="{{ id }}" class="group rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-sm overflow-hidden shadow-sm hover:shadow-md transition wow fadeInUp" data-wow-delay="0.5s">
         <header class="flex items-center gap-3 px-4 py-3 bg-navy/95 text-slate-100">
           <span class="inline-flex size-12 items-center justify-center rounded-xl ring-1 ring-white/10">
             {{ serviceIcon(iconName, 26) }}
@@ -67,67 +62,25 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
             </ul>
           {% endif %}
 
-          {# {% if desc %}
-            <p class="mt-4 text-sm text-slate-600">{{ desc }}</p>
-          {% endif %}
-
-          {% if cta %}
-            <a href="https://wa.link/yarwxp/"
-               class="mt-5 inline-block bg-gold text-navy px-4 py-2 rounded hover:opacity-90">
-              {{ dict.common['btn.requestQuote'] }}
-            </a>
-          {% endif %} #}
         </div>
       </article>
     {% endmacro %}
 
-    {{ serviceCard("accounting", "accounting", dict.service.accounting.title, dict.service.accounting.bullets, "", true) }}
-    {{ serviceCard("advisory", "advisory", dict.service.advisory.title, dict.service.advisory.bullets, dict.service.advisory.desc, false) }}
-    {{ serviceCard("hr", "hr", dict.service.hr.title, dict.service.hr.bullets, dict.service.hr.desc, false) }}
+    {{ serviceCard("accounting", "accounting", dict.service.accounting.title, dict.service.accounting.bullets) }}
+    {{ serviceCard("advisory", "advisory", dict.service.advisory.title, dict.service.advisory.bullets) }}
+    {{ serviceCard("hr", "hr", dict.service.hr.title, dict.service.hr.bullets) }}
 
   </div>
 </section>
 
-{# <section class="container mx-auto py-8 border-t-2 border-slate-100 text-slate-700">
-  <div class="ltr:max-w-2xl rtl:max-w-xl ms-auto px-4">
-    <div class="mask-[url('/images/logo-icon-xs.png')] bg-[url('/images/view.png')]">
-    <picture>
-      <source srcset="/images/icon-mask.png" type="image/png" />
-      <img
-        src="/images/view.png"
-        alt="Riyadh skyline inside the logo mark"
-        width="440" height="440"
-        loading="lazy" decoding="async"
-        class="w-28 sm:w-36 md:w-44 lg:w-52 xl:w-56 mb-6 drop-shadow"
-      />
-    </picture>
-    </div>
-
-    <p class="text-3xl sm:text-5xl text-balance indent-20">
-      {{ dict.service.advisory.desc }}
-    </p>
-  </div>
-</section> #}
-
-{# --- WIDE CTA BAND (replaces the two long paragraphs) --- #}
-{# <section class="mt-4 border-t border-slate-100 bg-light/30">
-  <div class="max-w-6xl mx-auto px-4 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-    <a href="services" class="mt-10 inline-block text-gold font-semibold hover:underline">{{ dict.cta.more }} ...</a>
-    <p class="text-xl sm:text-2xl text-slate-800 max-w-3xl">
-      {{ dict.service.hr.desc }}
-    </p>
-    <a href="https://wa.link/yarwxp/"
-       class="inline-block bg-navy text-white px-5 py-3 rounded hover:opacity-90">
-      {{ dict.common['cta.freeConsult'] }}
-    </a>
-  </div>
-</section> #}
-<!-- Pre-footer teaser -->
 <section class="container mx-auto py-14 border-t-2 border-slate-100 text-slate-700">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-4">
 
     <!-- Masked image (CSS mask) -->
-    <div class="relative w-40 sm:w-56 md:w-64 aspect-square justify-self-center">
+    <div class="relative w-40 sm:w-56 md:w-64 aspect-square justify-self-center
+                wow unblur-scale"
+         data-wow-duration="2s"
+         data-wow-offset="90">
       <div
         class="absolute inset-0 bg-[image:url('/images/view.png')] bg-cover bg-center
                [mask-image:url('/images/icon-mask.png')] [-webkit-mask-image:url('/images/icon-mask.png')]
@@ -139,28 +92,45 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
     </div>
 
     <!-- Text -->
-    <p class="text-2xl sm:text-4xl leading-tight text-slate-800">
+    <p class="text-2xl sm:text-4xl leading-tight text-slate-800
+              wow fadeInUp"
+       data-wow-duration="1.5s"
+       data-wow-delay="0.4s">
       {{ dict.service.advisory.desc }}
     </p>
   </div>
 </section>
 
-<!-- Final CTA band (pre-footer) -->
 <section class="my-10">
   <div class="container mx-auto px-4">
-    <div class="rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 to-white shadow-sm overflow-hidden">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 to-white shadow-sm overflow-hidden
+                wow fadeInUp"
+         data-wow-duration="2s"
+         data-wow-offset="100">
       <div class="grid lg:grid-cols-[1fr_auto] items-center gap-6 p-6 md:p-10">
-        <p class="text-xl sm:text-2xl text-slate-800 max-w-3xl">
+
+        <p class="text-xl sm:text-2xl text-slate-800 max-w-3xl
+                  wow fadeIn{{ dict.css.start }}"
+           data-wow-duration="1.5s"
+           data-wow-delay="0.5s">
           {{ dict.service.hr.desc }}
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
           <a href="https://wa.link/yarwxp/"
-             class="inline-flex items-center justify-center rounded bg-gold px-5 py-3 font-medium hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-navy/60">
+             class="inline-flex items-center justify-center rounded bg-gold px-5 py-3 font-medium hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-navy/60
+                    wow zoomIn"
+             data-wow-duration="1s"
+             data-wow-delay="0.5s">
             {{ dict.common['cta.freeConsult'] }}
           </a>
+
+          {# Optional secondary CTA (kept commented); keep the stagger if you enable it #}
           {# <a href="services"
-             class="inline-flex items-center justify-center rounded-lg border border-gold/30 text-gold px-5 py-3 font-semibold hover:border-gold/60 hover:text-gold">
+             class="inline-flex items-center justify-center rounded-lg border border-gold/30 text-gold px-5 py-3 font-semibold hover:border-gold/60 hover:text-gold
+                    wow zoomIn"
+             data-wow-duration="0.5s"
+             data-wow-delay="0.35s">
             {{ dict.cta.more }} …
           </a> #}
         </div>
@@ -168,4 +138,5 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
     </div>
   </div>
 </section>
+
 

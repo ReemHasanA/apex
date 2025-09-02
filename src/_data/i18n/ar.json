@@ -164,6 +164,14 @@
     ],
     "ctaTitle": "تواصل لنتحدث عن قطاعك"
   },
+  "partners": {
+    "title": "الشركاء الاستراتيجيون",
+    "logos": [
+      {"src": "/images/partners/odoo.png","name": "أودو", "url":"https://odoo.com"},
+      {"src": "/images/partners/36.png","name": "ثيرتي سيكس", "url":"https://Thirtysix36.com"},
+      {"src": "/images/partners/wafeq.png","name": "وافق", "url":"https://wafeq.com"}
+    ]
+  },
 
   "contact": {
     "title": "تواصل معنا",
