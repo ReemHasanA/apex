@@ -34,7 +34,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
   </div>
 </section>
 
-<!-- WHO + VALUES -->
+<!-- WHO -->
 <section class="py-16">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl sm:text-4xl hd-underline
@@ -48,47 +48,6 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
       {{ dict.about.who.body }}
     </p>
 
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <!-- Repeat for each value (staggered) -->
-      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
-                      wow rise-fade" data-wow-duration="0.65s">
-        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
-          <!-- check-circle -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M8.5 12.5l2.5 2.5 4.5-5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[0].title }}</h3>
-        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[0].body }}</p>
-      </article>
-
-      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
-                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="0.3s">
-        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
-          <!-- shield-check -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
-            <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"></path>
-            <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[1].title }}</h3>
-        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[1].body }}</p>
-      </article>
-
-      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
-                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="0.6s">
-        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
-          <!-- trend-up -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
-            <path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M14 7h7v7" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[2].title }}</h3>
-        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[2].body }}</p>
-      </article>
-    </div>
   </div>
 </section>
 
@@ -109,6 +68,66 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
   </div>
 </section>
 
+<!-- VALUES -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
+      <!-- Repeat for each value (staggered) -->
+      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
+                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="0.5s">
+        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
+          <!-- check-circle -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M8.5 12.5l2.5 2.5 4.5-5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[0].title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[0].body }}</p>
+      </article>
+
+      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
+                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="1s">
+        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
+          <!-- shield-check -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
+            <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"></path>
+            <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[1].title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[1].body }}</p>
+      </article>
+
+      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
+                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="1.5s">
+        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
+          <!-- trend-up -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
+            <path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M14 7h7v7" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[2].title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[2].body }}</p>
+      </article>
+      <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
+                      wow rise-fade" data-wow-duration="0.65s" data-wow-delay="2s">
+        <div class="w-10 h-10 rounded-full bg-gold/15 text-gold flex items-center justify-center ring-1 ring-gold/20 mb-3" aria-hidden="true">
+            <!-- globe (impact) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
+            <circle cx="12" cy="12" r="9"></circle>
+            <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+            <ellipse cx="12" cy="12" rx="9" ry="4"></ellipse>
+            </svg>
+        </div>
+        <h3 class="font-medium text-slate-900">{{ dict.about.values.items[3].title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ dict.about.values.items[3].body }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- TEAM -->
 <section id="team" class="py-20 bg-navy text-white">
   <div class="max-w-6xl mx-auto px-4">
@@ -122,8 +141,8 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
       {% for m in dict.about.team.members %}
         <article class="p-6 rounded-xl bg-white/10 border border-white/10 card-lift
                         wow rise-fade"
-                 data-wow-duration="0.7s"
-                 data-wow-delay="{{ (loop.index0 * 0.4) }}s">
+                 data-wow-duration="1s"
+                 data-wow-delay="{{ (loop.index0 * 0.5) }}s">
           <div class="flex gap-3 items-center mb-4">
             <!-- Optional avatar placeholder (initial) -->
             <div class="size-20 rounded-full bg-white/15 flex items-center justify-center ring-1 ring-white/10">

@@ -24,7 +24,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
     </div>
 
     {# CTA card: static on mobile, absolute on md+ #}
-    <div class="m-6 md:mt-0 md:absolute md:end-6 md:top-6 md:max-w-md wow fadeInDown"
+    {# <div class="m-6 md:mt-0 md:absolute md:end-6 md:top-6 md:max-w-md wow fadeInDown"
      data-wow-duration=".7s">
       <div class="rounded-xl border border-slate-200 p-6 sm:p-7 bg-white/80 backdrop-blur">
         <p class="text-sm text-slate-600">{{ dict.service.accounting.desc }}</p>
@@ -33,7 +33,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
           {{ dict.common['btn.requestQuote'] }}
         </a>
       </div>
-    </div>
+    </div> #}
   </div>
 </section>
 {# --- CARDS GRID --- #}
@@ -68,11 +68,11 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 
     {{ serviceCard("accounting", "accounting", dict.service.accounting.title, dict.service.accounting.bullets) }}
     {{ serviceCard("advisory", "advisory", dict.service.advisory.title, dict.service.advisory.bullets) }}
-    {{ serviceCard("hr", "hr", dict.service.hr.title, dict.service.hr.bullets) }}
+    {{ serviceCard("policies", "policies", dict.service.policies.title, dict.service.policies.bullets) }}
 
   </div>
 </section>
-
+{# 
 <section class="container mx-auto py-14 border-t-2 border-slate-100 text-slate-700">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-4">
 
@@ -113,7 +113,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
                   wow fadeIn{{ dict.css.start }}"
            data-wow-duration="1.5s"
            data-wow-delay="0.5s">
-          {{ dict.service.hr.desc }}
+          {{ dict.service.policies.desc }}
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 sm:justify-end">
@@ -128,6 +128,6 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
       </div>
     </div>
   </div>
-</section>
-
+</section> 
+#}
 

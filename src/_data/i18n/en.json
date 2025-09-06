@@ -42,22 +42,23 @@
     "heroDesc": "APEX is a licensed consultancy firm serving SMEs across Saudi Arabia with accounting, financial and administrative expertise.",
     "who": {
       "title": "Who we are",
-      "body": "We’re specialists in accounting, finance and management, helping partners operate efficiently and make confident decisions across retail, entertainment & sports, construction, restaurants and e-commerce."
+      "body": "A company licensed by the Saudi Organization for Chartered and Professional Accountants (SOCPA) under license number 67, comprising a team of experts and specialists in accounting, financial, and administrative fields. We strive to provide our exceptional consultancy services to a wide range of sectors, including retail, entertainment, sports, construction, restaurants, and e-commerce."
     },
     "vision" :{
       "title": "Our Vision",
-      "body": "To be a leading safe haven for SMEs in Saudi Arabia—supporting short, medium and long-term goals while enhancing sustainability and growth."
+      "body": "We strive to be the leading company in Saudi Arabia and a safe haven for small and medium-sized enterprises, supporting them in achieving their goals in the short, medium, and long term, while enhancing their sustainability and growth in a dynamic business environment."
     },
     "objectives" :{
       "title": "Objectives",
-      "body": "Instill the value of financial management by delivering sustainable solutions and advice that drive operational efficiency and long-term value."
+      "body": "We strive to establish the importance of financial management among our partners by providing sustainable solutions, services, and financial advice that enable them to achieve or exceed their goals. This is accomplished by supporting the company in achieving operational efficiency, which in turn contributes to enhancing its value."
     },
     "values": {
       "title": "Core Values",
       "items": [
-        { "title": "Quality", "body": "Professional standards, timely delivery, decision-ready outputs." },
-        { "title": "Confidentiality & Commitment", "body": "Information confidentiality and professional ethics across all departments." },
-        { "title": "Impact & Improvement", "body": "Solutions that empower clients and evolve with industry change." }
+        { "title": "Quality", "body": "We are committed to providing all services with high quality and professionalism to ensure the highest standards of quality and timely service delivery by adhering to professional standards. This contributes to supporting our partners in making the right decisions and adopting developmental measures to achieve future goals." },
+        { "title": "Confidentiality & Commitment", "body": "We consider confidentiality of information a fundamental duty that we uphold across all departments of the company by adhering to the rules and ethics of professional conduct" },
+        { "title": "Continuous Development and Improvement", "body": "We are dedicated to constantly enhancing our services to stay innovative, adapt to industry changes, and deliver lasting value that supports our partners' goals." },
+        { "title": "Making an Impact", "body": "We strive to make a meaningful impact by delivering solutions that empower our clients, drive success, and foster long-term value through quality, integrity, and innovation." }
       ]
     },
     "team" :{
@@ -66,19 +67,19 @@
         {
           "name": "Abdulaziz Dulaimi, CMA",
           "role": "CEO",
-          "bio": "10+ years in financial management, budgeting, analysis & restructuring; contributed to obtaining two SAMA licenses (crowdfunding & payments). MBA, Cleveland State.",
+          "bio": "Abdulaziz is the CEO of APEX Consultancy, with over 10 years of experience in financial management, including budgeting, financial analysis, and corporate restructuring. He holds a Bachelor’s degree in Financial and Banking Sciences from Petra University and an MBA from Cleveland State University. He played a key role in obtaining two licenses from the Saudi Central Bank (SAMA) in the sectors of crowdfunding and payments.",
           "email": "Abdulaziz@apexconsultancy-sa.com"
         },
         {
           "name": "Ahmad Mohammad, CMA, VAT Specialist, IFRS",
           "role": "Financial & Accounting Consultant",
-          "bio": "11+ years in the KSA market; leadership roles in budgeting, cash flow, receivables, VAT and financial policies. MSc (UOW), BSc (Petra).",
+          "bio": "Ahmad is a Financial and Accounting Consultant at APEX Consultancy, with over 11 years of experience in the Saudi market. He holds a Bachelor’s degree in Financial and Banking Sciences from Petra University and a Master’s in International Business from the University of Wollongong, Australia. He has held leadership r oles in budge ting, cash flow management, receivables, VAT and financial policies .",
           "email": "ahmad@apexconsultancy-sa.com"
         },
         {
           "name": "Shadi Al-Quedmani, IFRS",
           "role": "Accounting Manager",
-          "bio": "8+ years across finance & accounting: financial statements, analysis & budgeting. BCom & Econ (Damascus).",
+          "bio": "Shadi is an Accounting Manager at APEX Consultancy, with over 8 years of experience in the financial and accounting field. His expertise includes financial statement preparation, financial analysis, and budgeting. He holds a Bachelor’s degree in Commerce and Economics from Damascus University. Shadi has held various accounting positions across different sectors and has contributed to the success and growth of the organizations he worked with.",
           "email": "shadi@apexconsultancy-sa.com"
         }
       ]
@@ -96,6 +97,7 @@
         "Bookkeeping (monthly/quarterly)",
         "Financial statements preparation",
         "VAT registration & filing",
+        "HR management (payroll & contracts)",
         "Withholding tax services"
       ],
       "desc": "We implement a clean chart of accounts, automate reconciliations, and file VAT/WHT on time—built around ZATCA requirements."
@@ -109,10 +111,9 @@
       ],
       "desc": "From investment decisions to internal controls and valuation, our advisory helps you move confidently."
     },
-    "hr": {
+    "policies": {
       "title": "Preparing Policies & Procedures",
       "bullets": [
-        "HR management (payroll & contracts)",
         "Policies & procedures",
         "Corporate governance services"
       ],
