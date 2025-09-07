@@ -47,7 +47,6 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
        data-wow-duration="1.6s" data-wow-delay="0.2s">
       {{ dict.about.who.body }}
     </p>
-
   </div>
 </section>
 
@@ -71,6 +70,9 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}about.html"
 <!-- VALUES -->
 <section class="py-16">
   <div class="max-w-6xl mx-auto px-4">
+    <div class="bg-white/70 p-6 wow rise-fade" data-wow-duration="0.7s">
+      <h2 class="text-2xl text-navy hd-underline">{{ dict.about.values.title }}</h2>
+    </div>
     <div class="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
       <!-- Repeat for each value (staggered) -->
       <article class="p-6 rounded-2xl bg-white/80 border border-slate-200 card-lift
