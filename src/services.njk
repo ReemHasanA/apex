@@ -13,7 +13,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 {# --- HERO --- #}
 <section class="relative border-b border-slate-100 mb-14">
   <div class="absolute inset-0 bg-[url('/images/view.png')] bg-cover bg-center"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30"></div>
+  <div class="absolute inset-0 ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-white/90 via-white/70 to-white/30"></div>
 
   <div class="relative max-w-7xl mx-auto py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-4 m-6 wow fadeInUp"
@@ -38,7 +38,7 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 </section>
 {# --- CARDS GRID --- #}
 <section class="max-w-6xl mx-auto px-4 py-10">
-  <div class="grid md:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-2 gap-6">
 
     {# --- Card component --- #}
     {% macro serviceCard(id, iconName, title, bullets) %}
@@ -68,8 +68,6 @@ permalink: "{% if locale.slug %}{{ locale.slug }}/{% endif %}services.html"
 
     {{ serviceCard("accounting", "accounting", dict.service.accounting.title, dict.service.accounting.bullets) }}
     {{ serviceCard("advisory", "advisory", dict.service.advisory.title, dict.service.advisory.bullets) }}
-    {{ serviceCard("policies", "policies", dict.service.policies.title, dict.service.policies.bullets) }}
-
   </div>
 </section>
 {# 

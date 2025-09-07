@@ -61,12 +61,9 @@
 
 /* logo polish */
 .client-logos img { 
-  filter: grayscale(100%); 
   opacity:.85; 
-  transition: filter .25s ease, opacity .25s ease, transform .25s ease; 
 }
 .client-logos img:hover { 
-  filter: none; 
   opacity:1; 
   transform: translateY(-2px); 
 }

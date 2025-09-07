@@ -8,7 +8,7 @@
   "nav": {
     "about": "About",
     "services": "Services",
-    "clients": "Clients & Industries",
+    "clients": "Clients & Partners",
     "contact": "Contact"
   },
 
@@ -89,40 +89,33 @@
   "service": {
     "desc": "We provide comprehensive financial and advisory solutions tailored to meet the needs of small and medium-sized enterprises in Saudi Arabia.",
     "q": "What we do?",
-    "heroDesc": "Practical, compliant, and scalable services for SMEs in Saudi Arabia.",
+    "heroDesc": "Your reliable accounting and administrative partner in Saudi Arabia.",
     "accounting": {
       "title": "Accounting & Tax Advisory",
       "bullets": [
         "Design & setup of accounting systems",
-        "Bookkeeping (monthly/quarterly)",
-        "Financial statements preparation",
-        "VAT registration & filing",
-        "HR management (payroll & contracts)",
-        "Withholding tax services"
+        "Bookkeeping (quarterly/yearly)",
+        "Financial statements & budgets preparation",
+        "VAT preparation",
+        "Withholding tax services",
+        "Feasibility studies"
       ],
       "desc": "We implement a clean chart of accounts, automate reconciliations, and file VAT/WHT on time—built around ZATCA requirements."
     },
     "advisory": {
       "title": "Management Consulting",
       "bullets": [
-        "Feasibility studies",
-        "Internal auditing",
-        "Business valuation"
+        "HR management (payroll & contracts)",
+        "Policies and Procedures",
+        "Business valuation",
+        "Marketing Services with Thirtysix"
       ],
       "desc": "From investment decisions to internal controls and valuation, our advisory helps you move confidently."
-    },
-    "policies": {
-      "title": "Preparing Policies & Procedures",
-      "bullets": [
-        "Policies & procedures",
-        "Corporate governance services"
-      ],
-      "desc": "Clear policies and compliant payroll/contracts reduce risk and speed up hiring especially for growing SMEs."
     }
   },
 
   "clients": {
-    "title": "Clients & Industries",
+    "title": "Clients & Partners",
     "heroDesc": "We work across multiple sectors—bringing proven practices from one industry to another.",
     "industries": [
       {
@@ -139,7 +132,8 @@
         "title": "Entertainment & Sports",
         "body": "Project accounting, vendor management, event P&L.",
         "logos": [
-          { "src": "/images/clients/ent/distrct.png", "alt": "Sportsdistrict", "url": "https://example.com" },
+          { "src": "/images/clients/ent/distrct.png", "alt": "Sportsdistrict" },
+          { "src": "/images/clients/ent/padel-space.png", "alt": "Padel Space" },
           { "src": "/images/clients/ent/padel.png", "alt": "Padel Pass" }
         ]
       },
