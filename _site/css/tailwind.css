@@ -1482,6 +1482,11 @@
       max-height: 500px;
     }
   }
+  .lg\:max-h-\[600px\] {
+    @media (width >= 64rem) {
+      max-height: 600px;
+    }
+  }
   .lg\:max-w-lg {
     @media (width >= 64rem) {
       max-width: var(--container-lg);
@@ -1565,6 +1570,14 @@
     &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
       --tw-gradient-position: to top right in oklab;
       background-image: linear-gradient(var(--tw-gradient-stops));
+    }
+  }
+  .rtl\:lg\:text-6xl {
+    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
+      @media (width >= 64rem) {
+        font-size: var(--text-6xl);
+        line-height: var(--tw-leading, var(--text-6xl--line-height));
+      }
     }
   }
 }
