@@ -14,7 +14,7 @@
 
   "cta.book": "Book a Free Consultation",
   "cta" :{
-    "office": "Visit our office",
+    "location": "Visit our location",
     "more": "More",
     "about": "Know more About Us",
     "team": "Meet our Team",
@@ -27,8 +27,9 @@
     "cta.contact": "Contact page",
     "btn.requestQuote": "Request a quote",
     "hours": "Hours",
-    "hours.week": "Sun–Thu: 9:00–18:00",
-    "hours.weekend": "Fri–Sat: Closed",
+    "hours.week": "Sun–Thu: 8:00–17:00",
+    "hours.weeksat": "Sat: 10:00-14:00",
+    "hours.weekend": "Fri: Closed",
     "address.label": "Address",
     "address.text": "Olaya St, Al Akaria 3, Riyadh, Saudi Arabia",
     "phone.label": "Phone",
@@ -183,7 +184,6 @@
     "start": "Left",
     "end": "Right"
   },
-  "changelang": "عربي",
   "work": {
     "title": "Ready to improve your financial management?",
     "desc": "A Partnership To The Top"
