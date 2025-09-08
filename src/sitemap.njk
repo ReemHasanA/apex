@@ -1,0 +1,21 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- set pages = [
+  "/", "/about", "/services", "/clients",
+  "/en/", "/en/about", "/en/services", "/en/clients"
+] -%}
+{%- for p in pages -%}
+  <url>
+    <loc>{{ "https://apex-consultancy-sa.com" + p }}</loc>
+    <lastmod>2025-09-08</lastmod>
+    <changefreq>{{ ("weekly" if (p == "/" or p == "/en/") else "monthly") }}</changefreq>
+    <priority>{{ ("1.0" if (p == "/" or p == "/en/") else "0.8") }}</priority>
+  </url>
+{%- endfor -%}
+</urlset>

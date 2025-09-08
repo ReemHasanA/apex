@@ -20,7 +20,6 @@
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
@@ -602,12 +601,6 @@
       background-color: color-mix(in oklab, var(--color-gold) 15%, transparent);
     }
   }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
-  .bg-indigo-500 {
-    background-color: var(--color-indigo-500);
-  }
   .bg-light\/10 {
     background-color: color-mix(in srgb, #F5F5F5 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -902,9 +895,6 @@
   }
   .text-gray-300 {
     color: var(--color-gray-300);
-  }
-  .text-gray-400 {
-    color: var(--color-gray-400);
   }
   .text-navy {
     color: var(--color-navy);
