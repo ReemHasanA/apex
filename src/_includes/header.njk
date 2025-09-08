@@ -8,7 +8,6 @@
       <a href="about" class="text-navy hover:text-gold">{{ dict.nav.about}}</a>
       <a href="services" class="text-navy hover:text-gold">{{ dict.services}}</a>
       <a href="clients" class="text-navy hover:text-gold">{{ dict.nav.clients}}</a>
-      {# <a href="contact" class="text-navy hover:text-gold">{{ dict.nav.contact}}</a> #}
       {% for l in locales %}
         {% if l.code != locale.code %}
           <a href="{{ page.url | swapLang(locale, l) }}" dir="{{ l.dir }}" class="px-3 py-1 rounded border text-navy hover:bg-light">
@@ -28,7 +27,6 @@
       <a href="about" class="block">{{ dict.nav.about }}</a>
       <a href="services" class="block">{{ dict.services }}</a>
       <a href="clients" class="block">{{ dict.nav.clients }}</a>
-      {# <a href="contact" class="block">{{ dict.nav.contact }}</a> #}
       {% for l in locales %}
         {% if l.code != locale.code %}
           <a href="{{ page.url | swapLang(locale, l) }}" class="block" dir="{{ l.dir }}">
