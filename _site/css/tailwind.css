@@ -622,18 +622,6 @@
   .bg-navy {
     background-color: var(--color-navy);
   }
-  .bg-navy\/5 {
-    background-color: color-mix(in srgb, #0B2D45 5%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-navy) 5%, transparent);
-    }
-  }
-  .bg-navy\/10 {
-    background-color: color-mix(in srgb, #0B2D45 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-navy) 10%, transparent);
-    }
-  }
   .bg-navy\/15 {
     background-color: color-mix(in srgb, #0B2D45 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
